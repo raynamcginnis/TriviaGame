@@ -1,0 +1,36 @@
+body {
+    background-image: url("../images/rockclimbing.jpeg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed; 
+}
+
+h2 {
+    text-align: center;
+    color: #317fcc;
+    font-size: 50px;
+}
+
+.option {
+    align-content: center;
+    width: 800px;
+    background-color: #317fcc;}
+
+#start {
+    background-color: #317fcc;
+}
+
+.jumbotron {
+    margin: 100px;
+}
+ #remaining-time {
+     font-weight: 800px;
+ }
+
+ #question {
+    align-content: center;
+ }
+
+p {
+    align-content: center;
+}
