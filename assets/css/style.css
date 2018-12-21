@@ -1,7 +1,7 @@
 body {
-    background-image: url("../images/rockclimbing.jpeg");
+    background-image: url("../images/rockclimbing.jpg");
     background-repeat: no-repeat;
-    background-position: right top;
+    /* background-position: right top; */
     background-attachment: fixed; 
 }
 
@@ -9,6 +9,7 @@ h2 {
     text-align: center;
     color: #317fcc;
     font-size: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .option {
@@ -22,19 +23,24 @@ h2 {
 
 .jumbotron {
     margin: 100px;
-}
- #remaining-time {
-     font-weight: 800px;
- }
-
- #question {
-    align-content: center;
- }
+  }
 
  .container {
     align-content: center;
- }
+   }
 
 p {
-    align-content: center;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.navbar-text {
+text-align: center;
+width: 100%;
+}
+
+hr {
+    margin-left: 50px;
+    margin-right: 50px;
 }
