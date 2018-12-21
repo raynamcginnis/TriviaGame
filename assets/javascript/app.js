@@ -29,24 +29,24 @@ var trivia = {
     q10:"What is the most important thing you should do while belaying another climber?"
 },
   options: {
-    q1: ["Hiking to the top of a rocky mountain", "climbing through a boulder field", "using your body to ascend a rock face with or without the use of technical gear", "hanging out at the crag eating jelly beans and yelling beta"],
-    q2: ["offering route advice", "a move that resembled the way a Beta fish swims", "a term equivalent to RAD!", "when a male climber yells unsolicited advice to a female climber"],
-    q3: ["sport climbing", "traditional climbing", "bouldering", "alpine climbing"],
-    q4: ["sport climbing", "traditional climbing", "bouldering", "alpine climbing"],
-    q5: ["A specific route", "the highest point of a set route", "the hardest part of a route", "the safety gear necessary for a specific route"],
-    q6: ["Grigri", "belay glasses", "a chalk bag shaped like a stuffed animal", "a beanie"],
+    q1: ["Hiking to the top of a rocky mountain", "Climbing through a boulder field", "Using your body to ascend a rock face with or without the use of technical gear", "Hanging out at the crag eating jelly beans and yelling beta"],
+    q2: ["Offering route advice", "A move that resembled the way a Beta fish swims", "A term equivalent to RAD!", "When a male climber yells unsolicited advice to a female climber"],
+    q3: ["Sport climbing", "Traditional climbing", "Bouldering", "Alpine climbing"],
+    q4: ["Sport climbing", "Traditional climbing", "Bouldering", "Alpine climbing"],
+    q5: ["A specific route", "The highest point of a set route", "The hardest part of a route", "The safety gear necessary for a specific route"],
+    q6: ["Grigri", "Belay glasses", "A chalk bag shaped like a stuffed animal", "A beanie"],
     q7: ["UIAA", "Yosemite Decimal System", "Fontainebleau", "All climbing is graded the same throughout the world"],
     q8: ["30-50 meters", "40-60 meters", "50-70 meters", "60-80 meters"],
     q9: ["Chris Sharma", "Adam Ondra", "Lynn Hill","Ashima Shiraishi"],
     q10: ["Never let go of your break hand", "Encourage them by yelling things like DON'T FALL!", "Think about what type of pizza you're going to order when you're done", "Sweet talk the cute unleashed dog that's currently trying to steal your lunch out of your pack"]
 },
   answers: {
-    q1: "using your body to ascend a rock face with or without the use of technical gear",
-    q2: "offering route advice",
-    q3: "bouldering",
-    q4: "alpine climbing",
-    q5: "the hardest part of a route",
-    q6: "a beanie",
+    q1: "Using your body to ascend a rock face with or without the use of technical gear",
+    q2: "Offering route advice",
+    q3: "Bouldering",
+    q4: "Alpine climbing",
+    q5: "The hardest part of a route",
+    q6: "A beanie",
     q7: "Yosemite Decimal System",
     q8: "60-80 meters",
     q9: "Adam Ondra",
@@ -60,6 +60,7 @@ var trivia = {
     trivia.incorrect = 0;
     trivia.unanswered = 0;
     clearInterval(trivia.timerId);
+    clearTimeout(trivia.timerId);
     
     // show game section
     $('#game').show();
@@ -115,7 +116,7 @@ var trivia = {
           $('#timer').addClass('last-seconds');
         }
     }
-    // the time has run out and increment unanswered, run result
+    // the time has run out and question is unanswered, run result
     else if(trivia.timer === -1){
       trivia.unanswered++;
       trivia.result = false;
@@ -142,7 +143,7 @@ var trivia = {
     }
     
   },
-  // method to evaluate the option clicked
+  // method to figure out if question was answered correctly
   guessChecker : function() {
     
     // timer ID for gameResult setTimeout
@@ -158,6 +159,7 @@ var trivia = {
       
       trivia.correct++;
       clearInterval(trivia.timerId);
+      trivia.result = true;
       resultId = setTimeout(trivia.guessResult, 3000);
       $('#results').html('<h3>Correct Answer!</h3>');
     }
@@ -168,6 +170,7 @@ var trivia = {
       
       trivia.incorrect++;
       clearInterval(trivia.timerId);
+      trivia.result = true;
       resultId = setTimeout(trivia.guessResult, 5000);
       $('#results').html('<h3>Better luck next time! '+ "The correct answer was: " + currentAnswer +'</h3>');
     }
