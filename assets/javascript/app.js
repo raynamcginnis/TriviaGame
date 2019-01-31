@@ -188,7 +188,6 @@ var trivia = {
     
     // begin next question
     trivia.nextQuestion();
-     
+   
   }
-
 }

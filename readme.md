@@ -2,6 +2,8 @@
 
 Rock climbing themed trivia game using Bootstrap, JavaScript and jquery.
 
+Link to finished assignment: https://raynamcginnis.github.io/TriviaGame/
+
 ![Advanced](Images/2-advanced.jpg)
 
 **[Click Here to Watch the demo](https://youtu.be/xhmmiRmxQ8Q)**.
