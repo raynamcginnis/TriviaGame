@@ -9,6 +9,12 @@ Rock climbing themed trivia game using Bootstrap, JavaScript and jquery.
 1. Answer each question before the time runs out
 2. See your score at the end
 
+### Technologies
+- HTML
+- CSS
+- JavaScript 
+- Bootstrap
+
 ### Demo
 
 https://raynamcginnis.github.io/TriviaGame/
